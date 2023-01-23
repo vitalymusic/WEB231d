@@ -4,9 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Формы</title>
 </head>
 <body>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="fname">Ваше имя</label>
+        <input type="text" id="fname" name="name" maxlength="10" placeholder="Your name" value="default">
+        <input type="password" id="pass" name="password" maxlength="20">
+        <input type="number" id="num" name="number" step="2" max="100" min="-100">
+        <input type="date" id="date" name="date" >
+        <input type="color" id="date" name="date">
+<p>
+        <input type="checkbox" name="gender" id="male" value="">
+            <label for="male">мужчина</label>
+        <input type="checkbox" name="gender" id="female">
+            <label for="female">женщина</label>
+            <br>
+            <input type="radio" name="gender" id="male1">
+            <label for="male1">мужчина</label><br>
+        
+            <label>
+                <input type="radio" name="gender" >женщина
+            </label>
+
+</p>
+
+<p>
+    <select multiple>
+        <!-- <option value="">---</option> -->
+
+        <option value="1" selected>Понедельник</option>
+        <option value="2">Вторник</option>
+        <option value="3">Среда</option>
+    </select>
+
+</p>
+<p>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <input type="hidden" name="captcha" value="sekjhksdjfhskjdfhksjdhf ksjdh ksjdfh">
+
     
+</p>
+<p>
+    <input type="file" name="" id="" >
+</p>
+<p>
+    <input type="submit" value="Отправить">
+    <input type="reset" value="Очистить форму">
+    <input type="button" value="Любая кнопка">
+    
+</p>
+    </form>
+
+    <button>
+        Любая кнопка
+    </button>
+
+
+
+    <div>
+        <form action="https://www.google.com/search">
+            <input type="text" name="q" id="">
+            <input type="submit" value="искать в google">
+        </form>
+    </div>
 </body>
 </html>
+
+<!-- 
+    Сделать табличную верстку
+    Шапка, меню
+
+    Сделать форму для регистрации Пользователей
+ -->
