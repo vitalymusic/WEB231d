@@ -5,13 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Selectors</title>
+    <style>
+        *{
+            /* Select All */
+            margin:0;padding:0;
+
+        }
+        :root{
+            background:rgb(98, 255, 0)
+        }
+        html{
+            /* background:rgb(8, 0, 255)  */
+        }
+
+        div,table{
+            margin: 20px 0px;
+            height:500px;
+
+        }
+
+        section, .div1{
+            border: 2px solid red
+        }
+
+        .content > .div1,.content + .div1{
+            color: white;
+        }
+
+        /* .content + .div1{
+            color: white;
+        } */
+
+            table{
+                width:100%;
+            }
+            table, tr, th, td{
+                border: 1px solid black;
+            }
+            
+            table tr:first-child{
+                background-color: brown;
+            }
+            table tr:last-child{
+                background-color: rgb(50, 165, 42);
+            }
+
+            /* table tr:nth-child(3n+1){
+                background-color: rgb(212, 234, 13);
+            } */
+            table tr:nth-child(even){
+                background-color: rgb(212, 234, 13);
+            }
+            .div1 p::first-letter{
+                    font-size: 30px;
+                    color:red;
+            }
+            .div1 p::first-line{
+                    font-size: 30px;
+                    color:red;
+            }
+
+            
+
+            section::before{
+                content:"";
+                display: block;
+                background-image: url('https://freeiconshop.com/wp-content/uploads/edd/html-flat.png');
+                background-size: cover;
+                width: 50px;
+                height: 50px;
+                margin: 0 auto;
+
+                /* text-align: center;
+                border:none; */
+            }
+            section::after{
+                content:"***";
+                display: block;
+            }
+
+
+            /* section:first-child:before{
+               
+            } */
+
+            .first::before{
+                display: none;  
+            }
+
+    </style>
 </head>
 <body>
     <h1>title</h1>
     <div class="content">
         <div class="div1">
-
+                etot
         </div>
+        <div class="wrap">
+            <div class="div1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempora natus, tempore optio quis voluptate et quo beatae unde minima, nostrum praesentium esse reiciendis doloremque quisquam, ab culpa ex nulla!</p>
+            </div>
+        </div>
+       
+    </div>
+    <div class="div1">
+        etot
     </div>
     <table>
         <tr>
@@ -39,13 +137,86 @@
             <td>one</td>
             <td>one</td>
         </tr>
+        <tr>
+            <td>one</td>
+            <td>one</td>
+            <td>one</td>
+        </tr>
+        <tr>
+            <td>one</td>
+            <td>one</td>
+            <td>one</td>
+        </tr>
+        <tr>
+            <td>one</td>
+            <td>one</td>
+            <td>one</td>
+        </tr>
+        <tr>
+            <td>one</td>
+            <td>one</td>
+            <td>one</td>
+        </tr>
+        <tr>
+            <td>one</td>
+            <td>one</td>
+            <td>one</td>
+        </tr>
+        <tr>
+            <td>one</td>
+            <td>one</td>
+            <td>one</td>
+        </tr>
+        <tr>
+            <td>one</td>
+            <td>one</td>
+            <td>one</td>
+        </tr>
+        <tr>
+            <td>one</td>
+            <td>one</td>
+            <td>one</td>
+        </tr>
+        <tr>
+            <td>one</td>
+            <td>one</td>
+            <td>one</td>
+        </tr>
     </table>
 
-    <section>
-
+    <section class="first">
+        <h1>text</h1>
     </section>
     <section>
-        
+        <h1>text</h1>
+    </section>
+    <section>
+        <h1>text</h1>
+    </section>
+    <section>
+        <h1>text</h1>
+    </section>
+    <section>
+        <h1>text</h1>
+    </section>
+    <section>
+        <h1>text</h1>
+    </section>
+    <section>
+        <h1>text</h1>
     </section>
 </body>
 </html>
+
+
+<!-- домашнее задание
+
+    Сделать похожий дизайн по данному примеру применяя Flex Background, Форматирование текста 
+
+    Выбрать одно из:
+    
+    https://www.oxygenna.com/wp-content/uploads/2018/07/bootstrap.oxygenna.com_smartbox_.jpg
+
+    https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template.png
+
+-->
