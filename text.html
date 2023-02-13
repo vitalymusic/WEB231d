@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форматирование текста</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Inter&display=swap');
+
+        @font-face {
+            font-family: "myfont";
+            src: url('./Classica_One.ttf');
+            font-stretch: expanded;
+        }
+        body{
+            font-size:14pt
+        }
+        h1{
+            color:rgb(5, 238, 161);
+            font-size: 5rem;
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase;
+            /* font-family: 'Babylonica', cursive; */
+            letter-spacing: 30px;
+            /* background-color: rgb(127, 255, 127); */
+            /* -webkit-background-clip: text; */
+            /* color: transparent; */
+            text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.755);
+            /* font-family: 'Inter', sans-serif; */
+            /* outline: 5px dotted green; */
+            -webkit-text-stroke:1px red;
+        }
+        p{
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.755);
+            width: 50%;
+            height: 100px;
+            border: 2px solid red;
+            margin:auto;
+            text-align: justify;
+            text-indent: 20px;
+            /* white-space: nowrap; */
+            /* line-clamp: 2; 
+            -webkit-line-clamp: 2; */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 75ch;  
+            font-family: serif;
+            font-family: "Arial",sans-serif;
+            /* Google fonts */
+            
+            /* font-family: 'Inter', sans-serif; */
+            font-family: "myfont";
+            /* font-family: 'Babylonica', cursive; */
+            font-weight: bolder;
+            
+        }
+        a{
+            text-decoration:none;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Title</h1>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti molestiae distinctio odit excepturi facere quidem, vitae illo ea, culpa quaerat ipsum. Incidunt natus quaerat minus, possimus ullam obcaecati enim explicabo!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti molestiae distinctio odit excepturi facere quidem, vitae illo ea, culpa quaerat ipsum. Incidunt natus quaerat minus, possimus ullam obcaecati enim explicabo!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti molestiae distinctio odit excepturi facere quidem, vitae illo ea, culpa quaerat ipsum. Incidunt natus quaerat minus, possimus ullam obcaecati enim explicabo!
+
+           <a href="">Ссылка</a> 
+
+    </p>
+</body>
+</html>
