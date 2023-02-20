@@ -5,7 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=§, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+        <style>
+             @keyframes myanimation1{
+            0%{
+                    color:green;
+                    font-size:1.2rem;
+            }
+           50%{
+                    color:red;
+                    font-size:1.5rem;
+            }
+            100%{
+                    color:green;
+                    font-size:1.2rem;
+            }
+        }
+
+
+        h1:hover{
+            animation: myanimation1 infinite 1s;
+            animation-iteration-count: 3;
+            /* animation-delay: 5s; */
+            animation-play-state:running;
+        }
+
         *{
             margin: 0;
             padding: 0;
@@ -15,6 +42,10 @@
             background-color: rgb(5, 142, 254);
             
         }
+        nav button{
+                display: none;
+            }
+
         nav ul{
             list-style-type: none;
             display:flex;
@@ -31,17 +62,150 @@
             text-decoration: none;
             font-size: 2rem;
             font-family: "Arial";
+            position: relative;
+            top:0px
         }
+
+        nav ul li a:hover{
+            position: relative;
+            text-decoration: underline;
+            color:rgb(237, 8, 8);
+            top:-5px;
+            transition:  .7s cubic-bezier(0,.82,.61,1.35);
+        }
+        nav ul li a:active{
+            color:rgb(8, 237, 96);
+        }
+        nav ul li a:visited{
+            color:rgb(173, 255, 73);
+        }
+
+        .submenu{
+            position:absolute;
+            top:70px;
+            background-color: rgb(5, 142, 254);
+            display: none;
+        }
+        .submenu ul{
+            flex-direction: column;
+        }
+        .submenu ul li a{
+            color:white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-family: "Arial";
+            position: relative;
+            top:0px
+        }
+
+        .submenuBtn:hover .submenu{
+            display:block;
+        }
+
+        
+        @media screen and (max-width: 1000px) {
+            body{
+                background-color: aquamarine;
+            }
+
+            nav ul li a{
+                font-size: 1.2rem;
+            }
+
+        }
+
+        @media screen and (max-width: 500px) {
+            nav ul{
+                flex-direction: column;
+            }
+
+            @media screen and (max-width: 300px) {
+            nav ul{
+                flex-direction: column;
+                display: none;
+            }
+            nav button{
+                display: block;
+            }
+        }
+    }
+
+        /* @media print{
+
+        }
+        @media screen and (orientation: landscape){
+
+        } */
+
+
+
+        /* CSS ANIMATIONS */
+
+        /* CSS3 Transitions  */
+
+        .perspective{
+            perspective: 500px;
+        }
+
+.container {
+       width: 150px;
+       height: 150px;
+       background-color: beige;    
+       /* transform: rotate(45deg);
+       transform: scale(0.5); 
+       transform: skew(-10deg);
+       transform: translate(100px,100px); */
+       /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+       /* transform: matrix(5,0,1,5,400,400); */
+    transform: rotateY(90deg);
+    transform: rotateZ(45deg);
+    transform:scale3d(2,1.4,1.2);
+    transform: translate(400px,0px);
+    transform: matrix3d();
+    
+    /* matrix3d
+(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)	Defines a 3D transformation, using a 4x4 matrix of 16 values */
+
+
+}
+
+/* Сверстать одну страницу (раздел) сайта для последующей доработки
+
+        Блочная верстка, Адаптивность, и при наведении на элементы (меню) добавить анимации и транформации
+
+        Сделать красивую контактную форму
+        
+*/
+
+
+       
     </style>
 </head>
 <body>
-    <nav>
+    <nav class="animate__animated animate__bounceInDown">
+        <button>NAV</button>
         <ul>
             <li><a href="">Главная</a></li>
             <li><a href="">О Нас</a></li>
-            <li><a href="">Услуги</a></li>
+            <li class="submenuBtn"><a href="">Услуги</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="">Submenu</a></li>
+                        <li><a href="">Submenu</a></li>
+                        <li><a href="">Submenu</a></li>
+                        <li><a href="">Submenu</a></li>
+                    </ul>
+                </div>
+            </li>
             <li><a href="">Контакты</a></li>
         </ul>
     </nav>
+    <h1>Animated text</h1>
+<div class="perspective">
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quaerat magni debitis dolores, qui quam quos possimus tempora ex placeat esse repudiandae ullam doloribus, et, fugiat rem ipsum recusandae numquam!
+    </div>
+</div>
+  
 </body>
 </html>
