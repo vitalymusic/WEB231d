@@ -1,0 +1,20 @@
+$baseFontColor:green;
+$baseFontSize:14pt;
+
+h1{
+    color:$baseFontColor;
+    font-size: $baseFontSize*1.5;
+}
+h2{
+    color:$baseFontColor;
+    font-size: $baseFontSize*1.2;
+}
+p{
+    font-size: $baseFontSize;
+}
+@mixin myDiv($background){
+    height:50px;
+    margin-bottom:30px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.736);
+    background-color: $background;
+}
